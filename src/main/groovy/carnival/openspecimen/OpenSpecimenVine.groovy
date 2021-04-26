@@ -179,7 +179,7 @@ abstract class OpenSpecimenVine implements Vine {
         String code
         String specimenClass
         String type
-        Double initialQuantity
+        Double initialQty
         Double concentration
         String collectionContainer
         String cpShortTitle
@@ -234,6 +234,11 @@ abstract class OpenSpecimenVine implements Vine {
         String type
         String code
         String collectionContainer
+        Double initialQty
+        Double availableQty
+        StorageLocation StorageLocation
+        String storageType
+        String comments
     }
 
 
@@ -249,6 +254,19 @@ abstract class OpenSpecimenVine implements Vine {
         String label
         String parentLabel
         String type
+        Double initialQty
+        Double availableQty
+        StorageLocation StorageLocation
+        String storageType
+        String comments
+    }
+
+
+    @ToString(includeNames=true)
+    static class StorageLocation {
+        String name
+        Integer positionX
+        Integer positionY
     }
 
 }
